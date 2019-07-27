@@ -2,10 +2,30 @@
 
 <head>
 <title> Main page </title>
+<script src="localStorage.js"></script>
 </head>
 
 <body>
 <h1> It works </h1>
+<form action="#" name="localStorageAddForm" onsubmit="return addToLocalStorage()">
+	Add to localStorage:
+	<br>
+	Key:
+	<input type="text" name="key">
+	Value:
+	<input type="text" name="value">
+	<input type="submit" value="Submit">
+</form>
+
+<form action="#" name="localStorageGetForm" onsubmit="return getValueByKey()">
+	Get from localStorage:
+	<br>
+	Key:
+	<input type="text" name="key">
+	<input type="submit" value="Get">
+</form>
+
+<p id="result"> </p>
 </body>
 
 </html>
